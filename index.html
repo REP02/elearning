@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrainHack Academy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">🧠 BrainHack Academy</h1>
+            <nav>
+                <a href="#" class="nav-link" onclick="showHomePage()">Home</a>
+                <a href="#" class="nav-link" onclick="showProgress()">My Progress</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Home Page -->
+        <div id="home-page" class="page active">
+            <div class="container">
+                <section class="hero">
+                    <h2>Welcome to BrainHack Academy</h2>
+                    <p>Master the skills of tomorrow with our cutting-edge courses</p>
+                </section>
+
+                <section class="courses-section">
+                    <h3>Available Courses</h3>
+                    <div id="courses-grid" class="courses-grid">
+                        <!-- Courses will be dynamically generated here -->
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Course Detail Page -->
+        <div id="course-detail-page" class="page">
+            <div class="container">
+                <button class="back-btn" onclick="showHomePage()">← Back to Courses</button>
+                
+                <div class="course-header">
+                    <h2 id="course-title"></h2>
+                    <p id="course-description"></p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="course-progress-fill"></div>
+                    </div>
+                    <span id="progress-text" class="progress-text"></span>
+                </div>
+
+                <section class="lessons-section">
+                    <h3>Course Lessons</h3>
+                    <div id="lessons-list" class="lessons-list">
+                        <!-- Lessons will be dynamically generated here -->
+                    </div>
+                </section>
+
+                <div class="course-actions">
+                    <button id="complete-course-btn" class="btn btn-primary" onclick="completeCourse()" disabled>
+                        Complete Course
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Progress Page -->
+        <div id="progress-page" class="page">
+            <div class="container">
+                <h2>My Learning Progress</h2>
+                <div id="progress-summary" class="progress-summary">
+                    <!-- Progress summary will be generated here -->
+                </div>
+                <div id="progress-courses" class="progress-courses">
+                    <!-- Course progress will be generated here -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 BrainHack Academy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
